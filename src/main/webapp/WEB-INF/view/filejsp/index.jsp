@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Diario Di Bordo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); </style>
+        <link rel ="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="container-bg">
+            <div class="container"> 
+                <div>
+                    <h1>Diario di bordo</h1>
+                </div>
+                <div class="img">
+                    <img src="..\css\img\book.png" alt="immagine diario">
+                </div>
+                <div>
+                    <div id="paragraph">
+                        <div>
+                            <p id="par">Tieni traccia delle tue attività!</p>
+                        </div>
+                        <div>
+                            <p>Inserisci le tue credenziali per iniziare.</p>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <form method="post">
+                            <div class="form_group field">
+                                <div class="item1"> 
+                                    <input type="text" name="username" placeholder="Username" class="form_field" required>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="item2">
+                                    <input type="password" name="password" placeholder="Password" class="form_field" required>
+                                </div>
+                                <div  class="item3">
+                                    <a href="*"><button type="submit" class="item3">Accedi</button></a>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div id="inline"> 
+                        <p id="space">Non sei registrato?</p><a href="${pageContext.request.contextPath}/css/registrationform.css" id="link">Clicca qui</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </body>
+</html>

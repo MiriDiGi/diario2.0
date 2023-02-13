@@ -1,0 +1,121 @@
+* { 
+    color:#303030 ;
+}
+body {
+    background-image: linear-gradient(to bottom right, hsl(47, 54%, 55%),  hsl(73, 54%, 55%), hsl(179, 54%, 41%), hsl(205, 56%, 29%));
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 50px;
+    display: grid;
+    grid-template-areas: 
+    ". uno ."
+    ". due ."
+    "tre tre tre"; 
+    grid-auto-columns: 1fr;
+    width: fit-content;
+}
+
+.item:nth-child(1) {
+    justify-self: center;
+    grid-area: uno;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.item:nth-child(2) {
+    justify-self: center;
+    grid-area: due;
+    margin-bottom: 40px;
+}
+
+.item:nth-child(3) {
+    justify-self: center;
+    grid-area: tre;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    border-bottom: solid grey 2px;
+    width: 250px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input:focus{
+    outline: none;
+    background-color: transparent;
+    border-bottom: solid 2px;
+    border-image: linear-gradient(to right, hsl(73, 53%, 55%), #329d9c);
+    border-image-slice: 1;
+    color: #329d9c;
+}
+
+.area {
+    width: 100%;
+    height: 300px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    resize: none;
+  }
+
+.area:focus {
+    background-color: rgb(232, 232, 232);
+}
+
+select {
+    background-color: transparent;
+    border-radius: 4px;
+  }
+option {
+    background-color: rgb(232, 232, 232);
+}
+  button {
+    background-image: linear-gradient(to right, hsl(73, 53%, 55%), #329d9c);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 250px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.date {
+    position: relative;
+    justify-items: end;
+}
+
+input {
+    width: 300px;
+}
+
+#date {
+    margin-left: 10px;
+    width: min-content;
+    margin-bottom: 20px;
+}
