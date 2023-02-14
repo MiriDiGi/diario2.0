@@ -16,7 +16,8 @@ public class UsersDao {
         int result = 0;
 
         // Carico il driver JDBC
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
 
         Connection connection = null;
         try {

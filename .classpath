@@ -17,5 +17,11 @@
 	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/apache-tomcat-9.0.55/lib/mysql-connector-java-8.0.28.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/apache-tomcat-9.0.55/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/fontbox-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/pdfbox-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/pdfbox-tools-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/preflight-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/xmpbox-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hp/Desktop/Code for Future/dev/pdfbox-app-2.0.27.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

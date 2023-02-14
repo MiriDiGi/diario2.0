@@ -35,7 +35,7 @@ public class UsersServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher ("/WEB-INF/view/filejsp/usersregistration.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/usersregistration.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -63,7 +63,7 @@ public class UsersServlet extends HttpServlet {
 	    	e.printStackTrace();
 	    }
 	    
-	    RequestDispatcher dispatcher = request.getRequestDispatcher ("/WEB-INF/view/filejsp/index.jsp");
+	    RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/login.jsp");
 		dispatcher.forward(request, response);
 	}
 
