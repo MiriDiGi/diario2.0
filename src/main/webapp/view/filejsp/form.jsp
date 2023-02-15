@@ -25,10 +25,10 @@
                     <img src="${pageContext.request.contextPath}/css/img/book.png" alt="immagine diario">
                 </div>
                 <div class="item">
-                    <form action="post">
+                    <form action="<%= request.getContextPath()%>/save" method="post">
                         <div class="form_group field">
                             <div class="date">
-                                <label for="compilationdate">Data di compilazione:</label>
+                                <label for="data">Data di compilazione:</label>
                                 <%= new SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date()) %>
                             </div>
                             <div class="item1"> 
