@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
         	if (loginDao.loginUsers(loginbean)== true) {
         		 HttpSession session = request.getSession();
                 session.setAttribute("username",username);
-                RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/form.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/formvariation.jsp");
         		dispatcher.forward(request, response);
         	} else {
         		 HttpSession session = request.getSession();

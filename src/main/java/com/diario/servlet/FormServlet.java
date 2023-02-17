@@ -1,8 +1,11 @@
 package com.diario.servlet;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.io.OutputStream;
+
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -55,7 +58,7 @@ public class FormServlet extends HttpServlet {
 		
 		formBean.setData(request.getParameter("data"));
 		formBean.setAttività(request.getParameter("attività"));
-		formBean.setCompilatore(request.getParameter("compilatore"));
+	//	formBean.setCompilatore(request.getParameter("compilatore"));
 		formBean.setMansione(request.getParameter("mansione"));
 		formBean.setAzione(request.getParameter("azione"));
 		formBean.setElaborazione(request.getParameter("elaborazione"));
@@ -88,7 +91,7 @@ public class FormServlet extends HttpServlet {
         contentStream.newLine();
         contentStream.showText("Attività: " + formBean.getAttività());
         contentStream.newLine();
-        contentStream.showText("Compilatore: " + formBean.getCompilatore());
+ //       contentStream.showText("Compilatore: " + formBean.getCompilatore());
         contentStream.newLine();
         contentStream.showText("Mansione: " + formBean.getMansione());
         contentStream.newLine();
@@ -100,7 +103,10 @@ public class FormServlet extends HttpServlet {
 
      // Salvataggio del documento PDF nella cartella specificata
         document.save(file);
-       
+        
+       //riga 108/109 aggiunta. quello sopra funziona
+        String savePDFServletURL = request.getContextPath() + "/savepdf";
+        response.sendRedirect(savePDFServletURL);
 
         // Invio il documento PDF come risposta alla richiesta HTTP
         response.setContentType("application/pdf");
@@ -112,6 +118,9 @@ public class FormServlet extends HttpServlet {
         //chiudo documento
         document.close();
         System.out.println("pdf creato");
+        
+        
+        
 	}
 
 }
