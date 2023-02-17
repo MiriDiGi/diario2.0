@@ -88,8 +88,8 @@ public class UpdateNewServlet extends HttpServlet {
 	        java.sql.Timestamp added_date = new java.sql.Timestamp(serialVersionUID);
 	        System.out.println("path" + uploadPath);
 	        InputStream is = filePart.getInputStream();
-	        Files.copy(is, Paths.get(uploadPath + fileName), StandardCopyOption.REPLACE_EXISTING);
-	        
+	        Files.copy(is, Paths.get(uploadPath + fileName),StandardCopyOption.REPLACE_EXISTING);
+//provare a separ	        
 	        try {
 	        	Class.forName("com.mysql.cj.jdbc.Driver");
 				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/diario?log_form=root&password=YioW1785");
