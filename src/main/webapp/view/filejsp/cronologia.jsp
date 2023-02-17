@@ -41,7 +41,7 @@
                 <td><%= resultSet.getString("presenti") %></td>
                 <td><%= resultSet.getString("mansione") %></td>
                 <td><a href="DownloadServlet?fileName=<%=resultSet.getString("fase_azione")%>"><%=resultSet.getString("fase_azione")%></a></td>
-                <td><%= resultSet.getString("added_time") %></td>
+               
             </tr>
             <% } %>
         </tbody>
