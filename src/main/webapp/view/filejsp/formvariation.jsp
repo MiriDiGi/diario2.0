@@ -38,13 +38,13 @@
                             </div>               
                             <div class="item2">
                                 <label for="compilatore">Compilatore:</label><br>
-                                <input type="text" name="nome" class="form_field" required>
-                                <input type="text" name="cognome" class="form_field" required>
+                                <input type="text" name="nome" class="form_field" placeholder="Nome" id="name_label" required><br>
+                                <input type="text" name="cognome" class="form_field" placeholder="Cognome"id="surname_label"  required>
                             </div>
                             <div class="item3">
                                 <label for="presenti">Presenti:</label><br>
                                 
-                                <input type="text" id="name" name="presenti">
+                                <input type="text" id="name" name="presenti" class="form_field" placeholder="Inserire nome e cognome">
                                 <select id="mansione" name="mansione">
                                     <option value="empty">Seleziona un'opzione</option>
                                     <option value="direttore">Direttore</option>
@@ -54,19 +54,21 @@
                                     <option value="documentazione">Responsabile dei servizi di documentazione</option>
                                     <option value="stagista">Stagista</option>
                                 </select><br>
+                                
                           
                             </div>
                             <div>
-                                <label for="azione">Fase dell'azione</label><br>
-                                <input type="file" name="fase_azione">
+                                <label  for="azione">Fase dell'azione:</label><br>
+                                <input type="file" name="fase_azione" class="label_file">
                             </div>
                             <div>
-                                <label for="elaborazione">Fase dell'elaborazione</label><br>
-								<input type="file" name="fase_elaborazione">
+                                <label for="elaborazione">Fase dell'elaborazione:</label><br>
+								<input type="file" class="label_file" name="fase_elaborazione">
                             </div>
-                            <div  class="item4">
-                                <button type="submit" value="Submit" class="item3">Conferma</button>
-                                <button type="reset">Reset</button>
+                            <div  class="item4"> 
+                                <button type="reset" class="reset_btn">Reset</button>
+                                <button type="submit" value="Submit" class="item3" id="send_btn">Conferma</button>
+                               
                             </div>  
                         </div>
                     </form>

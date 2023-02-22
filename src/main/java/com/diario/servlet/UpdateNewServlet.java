@@ -72,6 +72,8 @@ public class UpdateNewServlet extends HttpServlet {
 			if (!dir.exists()) {
 				dir.mkdirs();
 			}
+			Part filePartDue = request.getPart("fase_elaborazione"); 
+			System.out.println(filePartDue);
 			Part filePart =  request.getPart ("fase_azione");
 			System.out.println(filePart);
 			String attività = request.getParameter("attivita");
@@ -84,10 +86,13 @@ public class UpdateNewServlet extends HttpServlet {
 	        System.out.println(presenti);
 	        String mansione = request.getParameter("mansione");
 	        String fileName = filePart.getSubmittedFileName();
+	        String fileNameDue = filePartDue.getSubmittedFileName();
 	        String path = folderName + File.separator + fileName;
 	        java.sql.Timestamp added_date = new java.sql.Timestamp(serialVersionUID);
 	        System.out.println("path" + uploadPath);
 	        InputStream is = filePart.getInputStream();
+	        InputStream isDue = filePartDue.getInputStream();
+	        Files.copy(isDue, Paths.get(uploadPath + fileNameDue),StandardCopyOption.REPLACE_EXISTING);
 	        Files.copy(is, Paths.get(uploadPath + fileName),StandardCopyOption.REPLACE_EXISTING);
 //provare a separ	        
 	        try {
@@ -101,7 +106,7 @@ public class UpdateNewServlet extends HttpServlet {
 				preparedStatement.setString(4, presenti);
 				preparedStatement.setString(5, mansione);
 				preparedStatement.setString(6, fileName);
-				preparedStatement.setString(7, fileName);
+				preparedStatement.setString(7, fileNameDue);
 				int status = preparedStatement.executeUpdate();
 				if (status > 0) {
 					session.setAttribute("fileName", fileName);

@@ -1,0 +1,10 @@
+* { 
+    color:#303030 ;
+}
+body {
+    background-image: linear-gradient(to bottom right, hsl(47, 54%, 55%),  hsl(73, 54%, 55%), hsl(179, 54%, 41%), hsl(205, 56%, 29%));
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
