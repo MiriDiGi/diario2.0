@@ -32,30 +32,23 @@
                                 <%= new SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date()) %>
                             </div>
                             <div class="item1"> 
-                                <label for="attività">Attività:</label><br>
+                                <label for="attivita">Attività:</label><br>
                                 <input type="text" name="attivita" class="form_field" required>
                                 <span class="focus-border"></span>
                             </div>               
                             <div class="item2">
                                 <label for="compilatore">Compilatore:</label><br>
-                                <input type="text" name="nome" class="form_field" placeholder="Nome" id="name_label" required><br>
-                                <input type="text" name="cognome" class="form_field" placeholder="Cognome"id="surname_label"  required>
+                                <input type="text" name="compilatore" class="form_field" placeholder="Inserire nome e cognome" id="name_label" required>
+                               
                             </div>
                             <div class="item3">
-                                <label for="presenti">Presenti:</label><br>
-                                
-                                <input type="text" id="name" name="presenti" class="form_field" placeholder="Inserire nome e cognome">
-                                <select id="mansione" name="mansione">
-                                    <option value="empty">Seleziona un'opzione</option>
-                                    <option value="direttore">Direttore</option>
-                                    <option value="responsabile">Responsabile dei servizi educativi </option>
-                                    <option value="educatore">Educatore museale</option>
-                                    <option value="coordinatore">Coordinatore dei servizi di accoglienza e custodia</option>
-                                    <option value="documentazione">Responsabile dei servizi di documentazione</option>
-                                    <option value="stagista">Stagista</option>
-                                </select><br>
-                                
-                          
+                                <label for="presenti">Presenti:</label><br>                     
+                      
+                            		<textarea name="presenti" placeholder="1. nome e cognome
+                            		2. 
+                            		3."></textarea>
+                            		<textarea name="mansione"></textarea>
+                            		
                             </div>
                             <div>
                                 <label  for="azione">Fase dell'azione:</label><br>

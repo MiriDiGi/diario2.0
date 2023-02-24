@@ -78,13 +78,14 @@ public class UpdateNewServlet extends HttpServlet {
 			System.out.println(filePart);
 			String attività = request.getParameter("attivita");
 			System.out.println(attività);
-	        String nome = request.getParameter("nome");
-	        System.out.println(nome);
-	        String cognome = request.getParameter("cognome");
-	        System.out.println(cognome);
+	        String compilatore = request.getParameter("compilatore");
+	        System.out.println(compilatore);
 	        String presenti = request.getParameter("presenti");
+	        presenti = presenti.replaceAll("\r\n", "<br>");
 	        System.out.println(presenti);
 	        String mansione = request.getParameter("mansione");
+	        mansione = mansione.replaceAll("\r\n", "<br>");
+	        System.out.println(mansione);
 	        String fileName = filePart.getSubmittedFileName();
 	        String fileNameDue = filePartDue.getSubmittedFileName();
 	        String path = folderName + File.separator + fileName;
@@ -98,15 +99,14 @@ public class UpdateNewServlet extends HttpServlet {
 	        try {
 	        	Class.forName("com.mysql.cj.jdbc.Driver");
 				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/diario?log_form=root&password=YioW1785");
-				String insert = "INSERT INTO log_form (attività, nome, cognome, presenti, mansione, fase_azione, fase_elaborazione) VALUES (?, ?, ?, ?, ?, ?, ?);";
+				String insert = "INSERT INTO log_form (attività, compilatore, presenti, mansione, fase_azione, fase_elaborazione) VALUES ( ?, ?, ?, ?, ?, ?);";
 				PreparedStatement preparedStatement = connection.prepareStatement(insert);
 				preparedStatement.setString(1, attività);
-				preparedStatement.setString(2, nome);
-				preparedStatement.setString(3, cognome);
-				preparedStatement.setString(4, presenti);
-				preparedStatement.setString(5, mansione);
-				preparedStatement.setString(6, fileName);
-				preparedStatement.setString(7, fileNameDue);
+				preparedStatement.setString(2, compilatore);
+				preparedStatement.setString(3, presenti);
+				preparedStatement.setString(4, mansione);
+				preparedStatement.setString(5, fileName);
+				preparedStatement.setString(6, fileNameDue);
 				int status = preparedStatement.executeUpdate();
 				if (status > 0) {
 					session.setAttribute("fileName", fileName);

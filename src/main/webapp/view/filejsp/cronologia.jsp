@@ -13,11 +13,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); </style>
-        <link rel ="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cronologia.css">
+        <link rel ="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cronologia2.css">
     <title>Diario di bordo</title>
 </head>
 <body>
-    <h1>Elenco dei log</h1>
+    <h1>Cronologia</h1>
+    <div class="img">
+    		<img src="${pageContext.request.contextPath}\css\img\history1.png" alt="immagine cronologia">
+    </div>
     <%
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/diario?user=root&password=YioW1785");
@@ -25,18 +28,18 @@
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         ResultSet resultSet = preparedStatement.executeQuery();
     %>
-    <table>
+    <div class="table-wrapper">
+    <table class="fl-table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th id="border-top-left">Id</th>
                 <th>Attività</th>
-                <th>Nome</th>
-                <th>Cognome</th>
+                <th>Compilatore</th>
                 <th>Presenti</th>
                 <th>Mansione</th>
                 <th>Fase dell'azione</th>
                 <th>Fase dell'elaborazione</th>
-                <th>Data</th>
+                <th id="border-top-right">Data</th>
             </tr>
         </thead>
         <tbody>
@@ -44,10 +47,9 @@
             <tr>
                 <td><%= resultSet.getString("id") %></td>
                 <td><%= resultSet.getString("attività") %></td>
-                <td><%= resultSet.getString("nome") %></td>
-                <td><%= resultSet.getString("cognome") %></td>
-                <td><%= resultSet.getString("presenti") %></td>
-                <td><%= resultSet.getString("mansione") %></td>
+                <td><%= resultSet.getString("compilatore") %></td>
+                <td class="text-left"><%= resultSet.getString("presenti") %></td>
+                <td class="text-left"><%= resultSet.getString("mansione") %></td>
                 <td><a href="DownloadServlet?fileName=<%=resultSet.getString("fase_azione")%>"><%=resultSet.getString("fase_azione")%></a></td>
                 <td><a href="DownloadServlet?fileName=<%=resultSet.getString("fase_elaborazione")%>"><%=resultSet.getString("fase_elaborazione")%></a></td>
                  <td><%= resultSet.getString("added_date") %></td>
@@ -55,5 +57,6 @@
             <% } %>
         </tbody>
     </table>
+    </div>
 </body>
 </html>

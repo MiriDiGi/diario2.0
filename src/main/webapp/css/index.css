@@ -62,6 +62,9 @@ h1 {
     margin-bottom: 40px;
 }
 
+.item3 {
+	font-weight: 600;
+}
 .form_field {
     border: none;
     background-color: transparent;
@@ -97,6 +100,7 @@ button {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 600;
 }
 
 button:hover {

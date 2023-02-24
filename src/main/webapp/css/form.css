@@ -7,6 +7,8 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+      background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -180,8 +182,4 @@ background: transparent;
 #name_label {
 	margin-bottom: 20px;
 	margin-top: 5px;
-}
-
-#surname_label {
-	margin-bottom: 10px;
 }
