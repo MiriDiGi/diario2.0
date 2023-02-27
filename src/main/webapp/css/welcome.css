@@ -42,17 +42,19 @@ p {
     margin-top: 30px;
 }
 
-.container {
-    background-color: #f2f2f2;
+.bg  {
+	background-color: #f2f2f2;
     border-radius: 20px;
     margin-top: 70px;
     margin-right: 95px;
     margin-left: 95px;
+    height: 520px;
+}
+.container {
     display: grid;
     grid-template-areas: 
     "uno uno uno"
-    "due tre quattro"
-    ". cinque ."; 
+    "due tre quattro";
     grid-auto-columns: 1fr;
 }
 
@@ -66,24 +68,20 @@ p {
     justify-self: center;
     grid-area: due;
     margin-right: -60px;
+     height: fit-content;
 }
 
 .item:nth-child(3) {
     justify-self: center;
     grid-area: tre;
+     height: fit-content;
 }
 
 .item:nth-child(4) {
     justify-self: center;
     grid-area: quattro;
     margin-left: -60px;
-}
-
-.item:nth-child(5) {
-    justify-self: center;
-    grid-area: cinque;
-    margin-top: -130px;
-    height: fit-content;
+     height: fit-content;
 }
 
 .item {
@@ -102,18 +100,19 @@ button {
     padding-bottom: 8px;
     text-align: center;
     font-size: 16px;
+     font-family: 'Poppins', sans-serif;
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 button:hover {
     opacity: 1;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 a{
@@ -148,6 +147,7 @@ img {
     padding-bottom: 6px;
     text-align: center;
     font-size: 16px;
+     font-family: 'Poppins', sans-serif;
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
@@ -158,16 +158,23 @@ img {
 
 .cronologia:hover {
     opacity: 1;
+    font-weight: 600;
 }
 
 
-#carattere {
-    font-weight: 300;
-    font-size: 16px;
-    margin: 5px;
-    
+.btn-block {
+	display: flex;
+	justify-content: center;
+	margin-top: 5px;
+    align-items: center;
 }
 
-.button-center, .cronologia{
-	margin-left: 40px;
+.button-center {
+	margin-left: 10px;
+	font-weight: 600;
+}
+
+.cronologia {
+	margin-right: 10px;
+	font-weight: 600;
 }

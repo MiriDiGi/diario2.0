@@ -44,10 +44,8 @@
                             <div class="item3">
                                 <label for="presenti">Presenti:</label><br>                     
                       
-                            		<textarea name="presenti" placeholder="1. nome e cognome
-                            		2. 
-                            		3."></textarea>
-                            		<textarea name="mansione"></textarea>
+                            		<textarea name="presenti" style="width: 340px; height: 150px;"></textarea>
+                            		<textarea name="mansione" style="width: 340px; height: 150px;"></textarea>
                             		
                             </div>
                             <div>
