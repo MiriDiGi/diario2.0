@@ -1,17 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diario Di Bordo</title>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
 	;
 </style>
-<link rel="stylesheet" href="..\css\welcome.css">
+<link rel="stylesheet" href="..\css\welcomevar.css">
 <meta charset="UTF-8">
 </head>
+<header>
+	<div class="logoname">
+		<a href="..\htmlfile\welcomevar.html">Diario di bordo</a>
+	</div>
+	<nav>
+		<ul class="menu">
+			<li><a href="..\htmlfile\welcomevar.html">Home</a></li>
+			<li><a href="..\view\filejsp\usersregistrationvar.jsp">Registrati</a></li>
+		</ul>
+	</nav>
+	<a href="..\view\filejsp\loginvar.jsp"><button>Accedi</button></a>
+</header>
 <body>
 	<div class="bg">
 		<div class="container">
 			<div class="item">
 				<div class="title">
-					<h1>Diario di bordo!</h1>
+					<h1>Diario di bordo</h1>
 				</div>
 			</div>
 			<div class="item">
@@ -44,10 +60,10 @@
 				<a href="..\view\filejsp\cronologia.jsp" id="link"><button
 						class="cronologia">Passa alla cronologia</button></a>
 			</div>
-			<div class="link-block">
-				<a href="..\view\filejsp\login.jsp" id="link"><button
-						type="submit" class="button-center">Compila il diario</button></a>
-			</div>
+				<div class="link-block">
+					<a href="..\view\filejsp\loginvar.jsp" id="link"><button
+							type="submit" class="button-center">Compila il diario</button></a>
+				</div>
 		</div>
 	</div>
 </body>

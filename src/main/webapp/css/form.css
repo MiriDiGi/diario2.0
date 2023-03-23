@@ -186,3 +186,39 @@ background: transparent;
 	margin-bottom: 20px;
 	margin-top: 5px;
 }
+
+.label-textarea {
+	display: flex;
+	justify-content: space-between;
+}
+
+#mansione {
+	margin-left: 27px;
+}
+
+.textarea {
+	width: 340px; 
+	height: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F8F8F8;
+    padding: 5px;
+    resize: none;
+}
+
+.textarea:focus {
+	border: solid 2px;
+	outline-color:#329d9c; 
+}
+
+#textarea-presenti {
+	margin-right: 15px;
+}
+
+#textarea-mensione {
+	margin-left: 15px;
+}
+
+::-webkit-textarea-placeholder {
+	color: blue;
+} 

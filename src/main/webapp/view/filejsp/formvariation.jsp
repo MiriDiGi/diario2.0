@@ -42,10 +42,15 @@
                                
                             </div>
                             <div class="item3">
-                                <label for="presenti">Presenti:</label><br>                     
+                            <div class="label-textarea">
+                                <label for="presenti" data-toggle="tooltip">Presenti:</label>     
+                                <label for="mansione" id="mansione">Mansione:</label><br>  
+                                </div>         
                       
-                            		<textarea name="presenti" style="width: 340px; height: 150px;"></textarea>
-                            		<textarea name="mansione" style="width: 340px; height: 150px;"></textarea>
+                            		<textarea name="presenti" class="textarea" id="textarea-presenti" placeholder="Nome e Cognome in colonna"></textarea>
+                            		
+                            		
+                            		<textarea name="mansione" class="textarea" id="textarea-mansione"></textarea>
                             		
                             </div>
                             <div>
