@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/login.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher ("/view/filejsp/loginvar.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -62,8 +62,10 @@ public class LoginServlet extends HttpServlet {
         		dispatcher.forward(request, response);
         	} else {
         		 HttpSession session = request.getSession();
-                session.setAttribute("user", username);
-                 response.sendRedirect("view/filejsp/loginfail.jsp");
+
+        	
+            session.setAttribute("user", username);
+                response.sendRedirect("view/filejsp/loginfail.jsp");
         	}
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
